@@ -8,6 +8,8 @@
 
 body{
 	font-family: 'メイリオ','Hiragino Kaku Gothic pro', sans-serif;
+	background-color: #e5e5e5;
+	margin: 0;
 }
 
 a	{color: #017acd}
@@ -17,6 +19,16 @@ div#container	{
 	width: 900px;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: #ffffff;
+	padding: 0 40px;
+	-webkit-box-shadow: 0px 0px 50px #bbbbbb;
+	box-shadow: 0px 0px 50px #bbbbbb;
+	background-image: url(circle.png), url(circle-yellow.png);
+	background-repeat: no-repeat;
+	background-position: 15px 420px,90px 500px;
+	background-size: 94px 94px,30px 30px;
+	position: relative;
+	overflow: hidden;
 }
 
 /* ヘッダー */
@@ -53,7 +65,19 @@ nav ul	{
 	margin-left: 0;
 	padding-left: 0;
 	height: 30px;
-	background-color: #005087;
+	background-color: #333333;
+	border-radius: 5px;
+	background: -webkit-gradient(linear, left top,
+	left bottom, from(#7777777),color-stop(50%,#444444),
+	color-stop(50%,#333333), to(#555555));
+	background: -webkit-linear-gradient(#777777 0%, #444444 50%,
+	#333333 51%, #555555 100%);
+	background: -moz-linear-gradient(#777777 0%, #444444 50%,
+	#333333 51%, #555555 100%);
+	background: -o-linear-gradient(#777777 0%, #444444 50%,
+	#333333 51%, #555555 100%);
+	background: -ms-linear-gradient(#777777 0%, #444444 50%,
+	#333333 51%, #555555 100%);
 }
 
 nav ul li	{
@@ -68,12 +92,15 @@ nav ul li a	{
 	text-decoration: none;
 	text-align: center;
 	color: #ffffff;
-	background-color: #005087;
-	border-right: solid 1px #ffffff;
+	border-right: solid 1px rgba(255,255,255);
+}
+nav ul li:first-of-type a:hover{
+	border-radius: 5px 0 0 5px;
 }
 
+
 nav ul li a:hover	{
-	background-color: #017acd;
+	background-color: rgba(1,122,205,0.3);
 }
 
 /* コンテンツ */
@@ -87,7 +114,12 @@ article header {
 	border: solid 1px #aaaaaa;
 	margin: 20px 0 10px;
 	padding: 18px;
-	border-radius: 5px
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 2px 3px #cccccc,
+	                    0px 0px 4px 3px #ffffff inset;
+	box-shadow: 0px 2px 5px #cccccc,
+	            0px 0px 4px 3px #ffffff inset;
+	background-color: rgba(255,255,255,0.5);
 }
 
 article header h1 {
@@ -113,7 +145,15 @@ article section {
 	margin: 20px 0 10px;
 	padding: 18px;
 	border-radius: 5px;
-	overflow: hidden
+	overflow: hidden;
+	background: -webkit-gradient(linear,left top,
+	left bottom, from(#ffffff),to(#dfdfdf));
+	background: -webkit-linear-gradient(#ffffff 0%,#dfdfdf 100%);
+	background: -moz-linear-gradient(#ffffff 0%,#dfdfdf 100%);
+	background: -o-linear-gradient(#ffffff 0%,#dfdfdf 100%);
+	background: -ms-linear-gradient(#ffffff 0%,#dfdfdf 100%);
+	-webkit-box-shadow: 0px 2px 3px #cccccc,0px 0px 4px 3px #ffffff inset;
+	box-shadow: 0px 2px 3px #cccccc,0px 0px 4px 3px #ffffff inset;
 }
 
 article section h1	{
@@ -138,19 +178,37 @@ article p	{
 
 /* フッター */
 footer	{
-	color: #ffffff;
-	background-color: #005087;
+	color: #888888;
 	margin-top: 25px;
 	padding-top: 8px;
 	padding-bottom: 8px;
 	clear:both;
+	border-top: solid 1px #aaaaaa;
 }
 
 small	{
 	font-size: 0.75em;
 	font-style: normal;
-	text-align: center;
+	text-align: left;
 	display: block;
+}
+
+small::before {content: 'GREEN LEAF';
+              display: block;
+              width: 200px;
+              padding: 10px 0;
+              background-color: #880000;
+              color: #ffffff;
+              font-family: 'Righteous', cursive;
+              font-size: 16px;
+              text-align: center;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              -webkit-transform: rotate(-45deg) translate(62px,20px);
+              -moz-transform: rotate(-45deg) translate(62px,20px);
+              -o-transform: rotate(-45deg) translate(62px,20px);
+              -ms-transform: rotate(-45deg) translate(62px,20px);
 }
 
 
@@ -180,9 +238,65 @@ article section:nth-of-type(odd) figcaption
 {
 	text-align:right;
 }
+/*３段組み*/
+article div[itemprop="articleBody"] {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-box;
+}
+article section{width: 288px;
+		margin-right: 18px;
+		box-sizing: border-box;
+}
+article section h1 {height:48px;
+                   line-height:1.2;
+}
+</style>
 
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+</script>
+<style>
+	article section figure {
+		float: right;
+		margin-left: 15px;
+		margin-bottom: 15px}
+	nav ul li a {
+	border-right: solid 1px #ffffff;
+	}
+	nav ul li a:hover {
+	background-color: #-017acd;
+	}
 
 </style>
+<![endif]-->
+
+<!--[if lt IE 10]>
+<style>
+	nav ul {
+		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#777777',endColorstr='#333333');
+
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#777777',endColorstr='#333333')";
+	}
+	article section{
+		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff',endColorstr='#dfdfdf');
+
+		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff',endColorstr='#dfdfdf')";
+	}
+</style>
+<![endif]-->
+
+<!--[if lt IE 8]>
+<style>
+	article section {
+		width: 250px;
+	}
+	article section figure {
+		margin-left: 0;
+	}
+</style>
+<![endif]-->
+
 </head>
 <body>
 
