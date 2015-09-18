@@ -49,7 +49,7 @@ nav {
 nav ul	{
 	font-size: 0.75em;
 	margin-top: 0;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	margin-left: 0;
 	padding-left: 0;
 	height: 30px;
@@ -83,18 +83,37 @@ article	{
 	margin-right: auto;
 }
 
+article header {
+	border: solid 1px #aaaaaa;
+	margin: 20px 0 10px;
+	padding: 18px;
+	border-radius: 5px
+}
+
 article header h1 {
 	background: none;
 	font-size: 28px;
 	color: #000000;
 	line-height: 45px;
 	padding-left: 0;
-	margin-bottom: 0;
+	margin: 0;
 	font-weight:normal;
+	float: left;
+}
+
+article header p {
+	font-size: 16px;
+	color: #444444;
+	margin-left: 300px;
 }
 
 article section {
 	clear:both;
+	border: solid 1px #aaaaaa;
+	margin: 20px 0 10px;
+	padding: 18px;
+	border-radius: 5px;
+	overflow: hidden
 }
 
 article section h1	{
@@ -103,7 +122,7 @@ article section h1	{
 	font-weight: normal;
 	line-height: 22px;
 	padding-left: 0;
-	margin-top: 30px;
+	margin-top: 0;
 	margin-bottom: 20px;
 	margin-left: 0;
 	margin-right: 0;
@@ -113,8 +132,8 @@ article p	{
 	font-size: 0.75em;
 	line-height: 1.6;
 	margin-top: 10px;
-	margin-left: 12px;
-	margin-right: 12px;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 /* フッター */
@@ -143,13 +162,13 @@ figure{
 article section:nth-of-type(odd) figure {
 	float: right;
 	margin-left: 15px;
-	margin-bottom: 15px;
+	margin-bottom: 0;
 }
 
 article section:nth-of-type(even) figure {
 	float: left;
 	margin-right: 15px;
-	margin-bottom: 15px;
+	margin-bottom: 0;
 }
 
 article section figcaption {
@@ -186,6 +205,7 @@ article section:nth-of-type(odd) figcaption
     <li><a href="http://blog.xxx.xxx/">ブログ</a></li>
     </ul>
 </nav>
+<img src="header.jpg" alt="">
 </header>
 
 <!-- コンテンツ -->
