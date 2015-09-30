@@ -242,13 +242,11 @@ article section{width: 288px;
 		overflow: visible;}
 
 article section h1 {height:48px;
-                   line-height:1.2;
-}
+                   line-height:1.2;}
 
 article section:nth-of-type(1n) figure{
 	float:none;
-	margin: 0;
-}
+	margin: 0;}
 
 article section:nth-of-type(1n) figcaption{
 	text-align:center;
@@ -382,10 +380,10 @@ function myimage() {
     if(canvas.getContext){
     var ctx = canvas.getContext('2d');
 
-    ctx.arc(14,14,14,0,Math.PI*2,true);
+    ctx.arc(14,14,14,0,Math.PI*2,true); //半径１４の円を描画
     ctx.fillStyle = "#" + Math.floor(Math.random()
     	            *256*256*256).toString(16);
-    ctx.fill();
+    ctx.fill(); //塗りつぶしを実行
     }
 }
 </script>
@@ -419,7 +417,7 @@ Green leaf</h1>
     <li><a href="http://blog.xxx.xxx/">ブログ</a></li>
     </ul>
 </nav>
-<img src="header.jpg" alt="">
+<img src="header.jpg" height="300" width="900" alt="">
 </header>
 
 <!-- コンテンツ -->
